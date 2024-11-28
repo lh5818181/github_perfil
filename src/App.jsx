@@ -1,21 +1,10 @@
 import Perfil from "./components/Perfil";
 
 function App() {
-const nome = 'luis';
-
-function retornaNome() {
-  return nome
-}
-
-const pessoas = {
-  nome: "maria",
-}
-
-let estaDia = true;
 
     return(
       <>
-      <Perfil />
+      <Perfil name="luis" endereco="https://github.com/lh5818181.png" />
       </>
     )
 
