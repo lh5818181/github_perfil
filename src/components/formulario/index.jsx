@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Formulario = () => {
     let [materiaA, setMateriaA] = useState(0);
@@ -6,14 +6,11 @@ const Formulario = () => {
     let [materiaC, setMateriaC] = useState(0);
     let [nome, setNome] = useState('');
 
-    const alteraNome = (evento) => {
-        // console.log(evento.target.value)
-        setNome(estadoAnterior => {
-            console.log(estadoAnterior);
+    useEffect(() => {
+        console.log("o estado nome mudou");
+    }, [nome]);
 
-            return evento.target.value;
-        })
-    }
+    const alteraNome = (evento) => { setNome(evento.target.value); }
 
 
     const renderizaResultado = () => {
