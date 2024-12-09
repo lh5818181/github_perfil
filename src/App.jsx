@@ -11,7 +11,8 @@ function App() {
   
   return(
       <>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+      <label className="label-perfil" >Insira o Nome do Usuario do GitHub e Clique em qualquer parte da tela:</label>
+      <input className="input-perfil" type="text" onBlur={(e) => setNomeUsuario(e.target.value)} placeholder="Nome do Usuario" />
 
       {nomeUsuario.length > 4 && (
         <>
